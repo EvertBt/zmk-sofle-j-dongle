@@ -19,3 +19,5 @@ include:
     shield: eyelash_sofle_peripheral_right nice_view
   - board: nice_nano_v2
     shield: settings_reset
+  - board: nrf52840dongle_nrf52840
+    shield: settings_reset
