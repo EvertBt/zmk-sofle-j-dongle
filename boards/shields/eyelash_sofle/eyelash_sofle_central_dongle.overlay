@@ -14,6 +14,9 @@
     chosen {
         zmk,kscan = &mock_kscan;
         zephyr,display = &oled;
+        /delete-property/ zephyr,console;
+        /delete-property/ zephyr,shell-uart;
+        /delete-property/ zephyr,uart-mcumgr;
     };
     mock_kscan: kscan_1 {
         compatible = "zmk,kscan-mock";
@@ -21,6 +24,10 @@
         rows = <0>;
         events = <0>;
     };
+};
+
+&cdc_acm_uart {
+    status = "disabled";
 };
 
 &pinctrl {
@@ -37,8 +44,8 @@
                 <NRF_PSEL(TWIM_SCL, 0, 20)>;
             low-power-enable;
         };
-    };	
-}; 
+    };
+};
 
 &i2c0 {
 	status = "okay";
