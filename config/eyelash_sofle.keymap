@@ -59,6 +59,86 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        inv_1: inv_1 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp EXCL>, <&kp N1>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        inv_2: inv_2 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp AT>, <&kp N2>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        inv_3: inv_3 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp HASH>, <&kp N3>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        inv_4: inv_4 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DLLR>, <&kp N4>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        inv_5: inv_5 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp PRCNT>, <&kp N5>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        inv_6: inv_6 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp CARET>, <&kp N6>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        inv_7: inv_7 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp AMPS>, <&kp N7>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        inv_8: inv_8 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp STAR>, <&kp N8>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        inv_9: inv_9 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <&kp N9>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        inv_0: inv_0 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RPAR>, <&kp N0>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -81,9 +161,9 @@
     combos {
         compatible = "zmk,combos";
 
-        softoff {
-            bindings = <&soft_off>;
-            key-positions = <14 28 40>;
+        toggle_code_layer {
+            bindings = <&tog 3>;
+            key-positions = <57 54>;
         };
     };
 
@@ -92,11 +172,11 @@
 
         layer_0 {
             bindings = <
-&kp ESC           &kp N1        &kp N2        &kp N3     &kp N4     &kp N5    &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9         &kp N0         &bspc_del
-&kp TAB           &kp Q         &kp W         &kp E      &kp R      &kp T     &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O          &kp P          &kp MINUS
-&kp LEFT_SHIFT    &kp A         &kp S         &kp D      &kp F      &kp G     &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L          &kp M          &kp RIGHT_SHIFT
-&kp LCTRL         &kp Z         &kp X         &kp C      &kp V      &kp B     &kp RIGHT_ARROW  &kp N      &kp SLASH  &kp COMMA  &kp DOT        &kp SEMICOLON  &kp EQUAL
-&kp C_PLAY_PAUSE  &kp LEFT_GUI  &kp LEFT_ALT  &kp SPACE  &kp SPACE  &mo 1     &trans           &kp SPACE  &kp ENTER  &mo 2      &kp BACKSLASH  &kp APOS
+&kp ESC           &kp N1        &kp N2  &kp N3        &kp N4     &kp N5    &kp UP_ARROW     &kp N6    &kp N7     &kp N8      &kp N9         &kp N0         &bspc_del
+&kp TAB           &kp Q         &kp W   &kp E         &kp R      &kp T     &kp DOWN_ARROW   &kp Y     &kp U      &kp I       &kp O          &kp P          &kp MINUS
+&kp LEFT_SHIFT    &kp A         &kp S   &kp D         &kp F      &kp G     &kp LEFT_ARROW   &kp H     &kp J      &kp K       &kp L          &kp M          &kp RIGHT_SHIFT
+&kp LCTRL         &kp Z         &kp X   &kp C         &kp V      &kp B     &kp RIGHT_ARROW  &kp N     &kp COMMA  &kp PERIOD  &kp SLASH      &kp SEMICOLON  &kp EQUAL
+&kp C_PLAY_PAUSE  &kp LEFT_GUI  &mo 2   &kp LEFT_ALT  &kp SPACE  &mo 1     &trans           &kp APOS  &kp ENTER  &mo 2       &kp BACKSLASH  &kp APOS
             >;
 
             sensor-bindings =
@@ -108,11 +188,11 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE        &kp F1                          &kp F2           &kp F3           &kp F4     &kp F5      &mmv MOVE_UP     &kp F6     &kp F7    &kp F8      &kp F9     &kp F10    &kp F11
-&rgb_ug RGB_TOG  &trans                          &mkp LCLK        &mkp MCLK        &mkp RCLK  &mkp MB4    &mmv MOVE_DOWN   &kp PG_UP  &kp END   &kp UP      &kp HOME   &trans     &kp F12
-&rgb_ug RGB_BRI  &rgb_ug RGB_EFF                 &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &trans     &mkp MB5    &mmv MOVE_LEFT   &kp PG_DN  &kp LEFT  &kp DOWN    &kp RIGHT  &trans     &trans
-&rgb_ug RGB_BRD  &rgb_ug RGB_EFR                 &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &trans     &trans      &mmv MOVE_RIGHT  &trans     &trans    &kp INSERT  &trans     &trans     &trans
-&kp C_MUTE       &rgb_ug RGB_COLOR_HSB(58,0,47)  &trans           &trans           &trans     &trans      &trans           &trans     &trans    &trans      &trans     &kp GRAVE
+&trans           &kp F1                          &kp F2           &kp F3           &kp F4     &kp F5      &mmv MOVE_UP     &kp F6     &kp F7    &kp F8      &kp F9     &kp F10  &kp F11
+&rgb_ug RGB_TOG  &trans                          &mkp LCLK        &mkp MCLK        &mkp RCLK  &mkp MB4    &mmv MOVE_DOWN   &kp PG_UP  &kp HOME  &kp UP      &kp END    &trans   &kp F12
+&rgb_ug RGB_BRI  &rgb_ug RGB_EFF                 &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &trans     &mkp MB5    &mmv MOVE_LEFT   &kp PG_DN  &kp LEFT  &kp DOWN    &kp RIGHT  &trans   &trans
+&rgb_ug RGB_BRD  &rgb_ug RGB_EFR                 &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &trans     &trans      &mmv MOVE_RIGHT  &trans     &trans    &kp INSERT  &trans     &trans   &trans
+&kp C_MUTE       &rgb_ug RGB_COLOR_HSB(58,0,47)  &trans           &trans           &trans     &trans      &trans           &trans     &trans    &trans      &trans     &trans
             >;
 
             display-name = "layer1";
@@ -121,8 +201,8 @@
 
         layer_2 {
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp C_FAST_FORWARD  &trans       &trans  &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DEL
-&trans  &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &bootloader     &kp C_REWIND        &bootloader  &trans  &trans  &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp C_FAST_FORWARD  &trans       &trans  &trans  &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp DEL
+&trans  &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &bootloader     &kp C_REWIND        &bootloader  &trans  &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans
 &trans  &out OUT_USB  &out OUT_BLE    &trans        &trans        &soft_off       &kp C_PREV          &soft_off    &trans  &trans  &trans                &trans                 &trans
 &trans  &trans        &trans          &trans        &trans        &sys_reset      &kp C_NEXT          &sys_reset   &trans  &trans  &trans                &trans                 &trans
 &trans  &trans        &trans          &trans        &trans        &trans          &trans              &trans       &trans  &trans  &trans                &kp GRAVE
@@ -132,16 +212,17 @@
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };
 
-        layer_3 {
+        coding {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &inv_1  &inv_2  &inv_3  &inv_4  &inv_5    &trans  &inv_6  &inv_7  &inv_8  &inv_9  &inv_0  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
-            display-name = "layer3";
+            display-name = "coding";
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
         };
     };
 };
