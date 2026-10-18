@@ -119,8 +119,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:volume-off$$
-  - RGB COLOR HSB(58,0,47)
-  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB COLOR HSB(250,100,3)
+  - RGB COLOR HSB(50,0,3)
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
