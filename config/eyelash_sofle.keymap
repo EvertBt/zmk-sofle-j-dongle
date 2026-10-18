@@ -185,7 +185,7 @@
 &rgb_ug RGB_TOG  &trans                            &mkp LCLK        &mkp MCLK        &mkp RCLK                      &mkp MB4    &mmv MOVE_DOWN   &kp PG_UP  &kp HOME  &kp UP      &kp END    &trans   &kp F12
 &rgb_ug RGB_BRI  &rgb_ug RGB_EFF                   &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &trans                         &mkp MB5    &mmv MOVE_LEFT   &kp PG_DN  &kp LEFT  &kp DOWN    &kp RIGHT  &trans   &trans
 &rgb_ug RGB_BRD  &rgb_ug RGB_EFR                   &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_COLOR_HSB(50,0,3)  &trans      &mmv MOVE_RIGHT  &trans     &trans    &kp INSERT  &trans     &trans   &trans
-&kp C_MUTE       &rgb_ug RGB_COLOR_HSB(280,100,3)  &trans           &trans           &trans                         &trans      &trans           &trans     &trans    &trans      &trans     &trans
+&kp C_MUTE       &rgb_ug RGB_COLOR_HSB(270,100,3)  &trans           &trans           &trans                         &trans      &trans           &trans     &trans    &trans      &trans     &trans
             >;
 
             display-name = "layer1";
