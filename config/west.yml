@@ -15,7 +15,7 @@ manifest:
   projects:
     - name: zmk-halcyon-module
       remote: splitkb
-      revision: main
+      revision: v0.3
     - name: hammerbeam-slideshow
       remote: evertbt
       revision: main
