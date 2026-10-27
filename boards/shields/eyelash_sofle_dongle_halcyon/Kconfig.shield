@@ -6,9 +6,9 @@ config SHIELD_EYELASH_SOFLE_DONGLE_HALCYON
 
 # Halcyon dongle defconfig compatibility symbols
 config ZMK_EXT_POWER_START
-    bool
+    bool "Enable ext power on start"
     default n
 
 config ZMK_BLE_PROFILE_ADVERTISING
-    bool
+    bool "Enable BLE profile advertising"
     default n
