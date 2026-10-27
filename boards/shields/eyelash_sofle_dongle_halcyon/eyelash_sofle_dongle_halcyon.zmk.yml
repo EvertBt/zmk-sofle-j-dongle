@@ -1,0 +1,10 @@
+file_format: "1"
+id: eyelash_sofle_dongle_halcyon
+name: Eyelash Sofle Dongle Halcyon
+type: shield
+url: https://github.com/EvertBt/zmk-sofle-j-dongle
+requires:
+  - halcyon_dongle
+siblings:
+  - eyelash_sofle_peripheral_left
+  - eyelash_sofle_peripheral_right
