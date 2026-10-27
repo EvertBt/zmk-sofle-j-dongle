@@ -10,7 +10,12 @@ manifest:
       url-base: https://github.com/tokyo2006
     - name: englmaxi
       url-base: https://github.com/englmaxi
+    - name: splitkb
+      url-base: https://github.com/splitkb
   projects:
+    - name: zmk-halcyon-module
+      remote: splitkb
+      revision: main
     - name: hammerbeam-slideshow
       remote: evertbt
       revision: main
