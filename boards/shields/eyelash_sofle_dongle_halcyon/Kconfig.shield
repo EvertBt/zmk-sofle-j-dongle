@@ -3,3 +3,12 @@
 
 config SHIELD_EYELASH_SOFLE_DONGLE_HALCYON
     def_bool $(shields_list_contains,eyelash_sofle_dongle_halcyon)
+
+# Halcyon dongle defconfig compatibility symbols
+config ZMK_EXT_POWER_START
+    bool
+    default n
+
+config ZMK_BLE_PROFILE_ADVERTISING
+    bool
+    default n
